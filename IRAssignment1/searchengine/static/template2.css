@@ -52,7 +52,7 @@ a
 {
 
 text-decoration:none;
-color:white;
+color:#4C66A4;
 }
 
 
@@ -63,6 +63,7 @@ td
 
 text-align:left;
 padding:10px;
+font-color : black
 }
 
 table
