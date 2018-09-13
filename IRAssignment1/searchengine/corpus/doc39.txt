@@ -1,0 +1,9 @@
+
+
+Summary 
+In organizational studies, resource management is the efficient and effective development of an organization's resources when they are needed. Such resources may include financial resources, inventory, human skills, production resources, or information technology (IT).
+In the realm of project management, processes, techniques and philosophies as to the best approach for allocating resources have been developed.  These include discussions on functional vs. cross-functional resource allocation as well as processes espoused by organizations like the Project Management Institute (PMI) through their Project Management Body of Knowledge (PMBOK) methodology of project management. Resource management is a key element to activity resource estimating and project human resource management. Both are essential components of a comprehensive project management plan to execute and monitor a project successfully. As is the case with the larger discipline of project management, there are resource management software tools available that automate and assist the process of resource allocation to projects and portfolio resource transparency including supply and demand of resources.  The goal of these tools typically is to ensure that: (i) there are employees within our organization with required specific skill set and desired profile required for a project, (ii) decide the number and skill sets of new employees to hire, and (iii) allocate the workforce to various projects. Within professional services and consulting organizations, the effectiveness of these tools and processes is typically monitored by measuring billable utilization rate.
+Corporate Resource Management Process
+None
+Techniques
+None

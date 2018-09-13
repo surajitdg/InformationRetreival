@@ -1,0 +1,56 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Summary 
+Online Business or e-business is a term which can be used for any kind of business or commercial transaction that includes sharing information across the internet. Commerce constitutes the exchange of products and services between businesses, groups and individuals and can be seen as one of the essential activities of any business. Electronic commerce focuses on the use of ICT to enable the external activities and relationships of the business with individuals, groups and other businesses or e business refers to business with help of internet i.e. doing business with the help of internet network. The term "e-business" was coined by IBM's marketing and Internet team in 1996.
+History
+In 1994, IBM, with its agency Ogilvy & Mather, began to use its foundation in IT solutions and expertise to market itself as a leader of conducting business on the Internet through the term "e-business." Then CEO Louis V. Gerstner, Jr. was prepared to invest $1 billion to market this new brand.After conducting worldwide market research in October 1997, IBM began with an eight-page piece in the Wall Street Journal that would introduce the concept of "e-business" and advertise IBM's expertise in the new field. IBM decided not to trademark the term "e-business" in the hopes that other companies would use the term and create an entire new industry. However, this proved to be too successful and by 2000, to differentiate itself, IBM launched a $300 million campaign about its "e-business infrastructure" capabilities. Since that time, the terms, "e-business" and "e-commerce" have been loosely interchangeable and have become a part of the common vernacular.
+Business model
+When organizations go online, they have to decide which e-business models best suit their goals. A business model is defined as the organization of product, service and information flows, and the source of revenues and benefits for suppliers and customers. The concept of e-business model is the same but used in the online presence.
+Revenue model
+A key component of the business model is the revenue model or profit model, which is a framework for generating revenues. It identifies which revenue source to pursue, what value to offer, how to price the value, and who pays for the value. It is a key component of a company's business model. It primarily identifies what product or service will be created in order to generate revenues and the ways in which the product or service will be sold.
+Without a well defined revenue model, that is, a clear plan of how to generate revenues, new businesses will more likely struggle due to costs which they will not be able to sustain. By having a clear revenue model, a business can focus on a target audience, fund development plans for a product or service, establish marketing plans, begin a line of credit and raise capital.
+E-commerce
+
+Concerns
+While much has been written of the economic advantages of Internet-enabled commerce, there is also evidence that some aspects of the internet such as maps and location-aware services may serve to reinforce economic inequality and the digital divide. Electronic commerce may be responsible for consolidation and the decline of mom-and-pop, brick and mortar businesses resulting in increases in income inequality. Author Andrew Keen, a long-time critic of the social transformations caused by the Internet, has recently focused on the economic effects of consolidation from Internet businesses, since these businesses employ much fewer people per dollar of sales than traditional retailers.
+Security
+E-business systems naturally have greater security risks than traditional business systems, therefore it is important for e-business systems to be fully protected against these risks. A far greater number of people have access to e-businesses through the internet than would have access to a traditional business. Customers, suppliers, employees, and numerous other people use any particular e-business system daily and expect their confidential information to stay secure. Hackers are one of the great threats to the security of e-businesses. Some common security concerns for e-Businesses include keeping business and customer information private and confidential, authenticity of data, and data integrity. Some of the methods of protecting e-business security and keeping information secure include physical security measures as well as data storage, data transmission, anti-virus software, firewalls, and encryption to list a few.
+Privacy and confidentiality
+
+Authenticity
+
+Data integrity
+
+Non-repudiation
+
+Access control
+
+Availability
+
+Cost
+
+Security solutions
+When it comes to security solutions, sustainable electronic business requires support for data integrity, strong authentication, and privacy.
+Access and data integrity
+
+Encryption
+
+Digital certificates
+
+Digital signatures

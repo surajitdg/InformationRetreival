@@ -1,0 +1,9 @@
+
+
+Summary 
+Service management in the manufacturing context, is integrated into supply chain management as the intersection between the actual sales and the customer point of view. The aim of high performance service management is to optimize the service-intensive supply chains, which are usually more complex than the typical finished-goods supply chain. Most service-intensive supply chains require larger inventories and tighter integration with field service and third parties. They also must accommodate inconsistent and uncertain demand by establishing more advanced information and product flows. Moreover, all processes must be coordinated across numerous service locations with large numbers of parts and multiple levels in the supply chain.
+Among typical manufacturers, post-sale services (maintenance, repair and parts) account for less than 20 percent of revenue. But among the most innovative companies in service, those same activities often generate more than 50 percent of the profits.
+Benefits
+None
+Components
+None

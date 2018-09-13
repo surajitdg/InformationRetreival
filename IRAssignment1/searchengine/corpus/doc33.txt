@@ -1,0 +1,54 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Summary 
+Business process management (BPM) is a discipline in operations management in which people use various methods to discover, model, analyze, measure, improve, optimize, and automate business processes. BPM focuses on improving corporate performance by managing business processes. Any combination of methods used to manage a company's business processes is BPM. Processes can be structured and repeatable or unstructured and variable. Though not required, enabling technologies are often used with BPM.It can be differentiated from program management in that program management is concerned with managing a group of inter-dependent projects. From another viewpoint, process management includes program management. In project management, process management is the use of a repeatable process to improve the outcome of the project.As an approach, BPM sees processes as important assets of an organization that must be understood, managed, and developed to announce and deliver value-added products and services to clients or customers. This approach closely resembles other total quality management or continual improvement process methodologies. ISO 9000 promotes the process approach to managing an organization.
+
+ ...promotes the adoption of a process approach when developing, implementing and
+improving the effectiveness of a quality management system, to enhance customer satisfaction by meeting customer requirements.
+BPM proponents also claim that this approach can be supported, or enabled, through technology. As such, many BPM articles and scholars frequently discuss BPM from one of two viewpoints: people and/or technology.
+Definitions
+None
+Changes
+None
+Life-cycle
+None
+Design
+None
+Modeling
+None
+Execution
+None
+Monitoring
+None
+Optimization
+None
+Re-engineering
+None
+Suites
+None
+Practice
+None
+Technology
+None
+Cloud computing BPM
+None
+Market
+None
+Benefits
+None
+Internet of things
+None

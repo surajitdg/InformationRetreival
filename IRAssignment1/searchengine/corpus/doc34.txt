@@ -1,0 +1,80 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Summary 
+In industry, product lifecycle management (PLM) is the process of managing the entire lifecycle of a product from inception, through engineering design and manufacture, to service and disposal of manufactured products. PLM integrates people, data, processes and business systems and provides a product information backbone for companies and their extended enterprise.
+History
+None
+Forms
+None
+Benefits
+None
+Areas of PLM
+None
+Introduction to development process
+None
+Phases of product lifecycle and corresponding technologies
+None
+Phase 1: Conceive
+None
+Imagine, specify, plan, innovate
+None
+Phase 2: Design
+None
+Describe, define, develop, test, analyze and validate
+None
+Phase 3: Realize
+None
+Manufacture, make, build, procure, produce, sell and deliver
+None
+Phase 4: Service
+None
+Use, operate, maintain, support, sustain, phase-out, retire, recycle and disposal
+None
+All phases: product lifecycle
+None
+Communicate, manage and collaborate
+None
+User skills
+None
+Concurrent engineering workflow
+None
+Bottom–up design
+None
+Top–down design
+None
+Both-ends-against-the-middle design
+None
+Front loading design and workflow
+None
+Design in context
+None
+Product and process lifecycle management (PPLM)
+None
+Market size
+None
+Pyramid of Production Systems
+None

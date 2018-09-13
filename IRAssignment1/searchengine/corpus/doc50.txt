@@ -1,0 +1,24 @@
+
+
+
+Summary 
+Technology management is a set of management disciplines that allows organizations to manage their technological fundamentals to create competitive advantage. Typical concepts used in technology management are:
+
+technology strategy (a logic or role of technology in organization),
+technology forecasting (identification of possible relevant technologies for the organization, possibly through technology scouting),
+technology roadmap (mapping technologies to business and market needs), and
+technology project portfolio (a set of projects under development) and technology portfolio (a set of technologies in use).The role of the technology management function in an organization is to understand the value of certain technology for the organization. Continuous development of technology is valuable as long as there is a value for the customer and therefore the technology management function in an organization should be able to argue when to invest on technology development and when to withdraw.
+
+
+Overview
+Technology management can  also be defined as the integrated planning, design, optimization, operation and control of technological products, processes and services, a better definition would be the management of the use of technology for human advantage.
+The Association of Technology, Management, and Applied Engineering defines technology management as the field concerned with the supervision of personnel across the technical spectrum and a wide variety of complex technological systems. Technology management programs typically include instruction in production and operations management, project management, computer applications, quality control, safety and health issues, statistics, and general management principles.Perhaps the most authoritative input to our understanding of technology is the diffusion of innovations theory developed in the first half of the twentieth  century. It suggests that all innovations follow a similar diffusion pattern – best known today in the form of an "s" curve though originally based upon the concept of a standard distribution of adopters. In broad terms the "s" curve suggests four phases of a technology life cycle – emerging, growth, mature and aging.
+These four phases are coupled to increasing levels of acceptance of an innovation or, in our case a new technology. In recent times for many technologies an inverse curve – which corresponds to a declining cost per unit – has been postulated. This may not prove to be universally true though for information technology where much of the cost is in the initial phase it has been a reasonable expectation.
+The second major contribution to this area is the Carnegie Mellon Capability Maturity Model. This model proposes that a series of progressive capabilities can be quantified through a set of threshold tests. These tests determine repeatability, definition, management and optimization. The model suggests that any organization has to master one level before being able to proceed to the next.
+The third significant contribution comes from Gartner – the research service, it is the hype cycle, this suggests that our modern approach to marketing technology results in the technology being over hyped in the early stages of growth. Taken together, these fundamental concepts provide a foundation for formalizing the approach to managing technology.
+Mobile device management
+Mobile device management (MDM) is the administrative area dealing with deploying, securing, monitoring, integrating and managing mobile devices, such as smartphones, tablets and laptops, in the workplace and other areas. The intent of MDM is to optimize the functionality and security of mobile devices within the enterprise, while simultaneously protecting the corporate network. MDM is usually implemented with the use of a third party product that has management features for particular vendors of mobile devices.
+Accreditation and certification
+The Association of Technology, Management, and Applied Engineering (ATMAE), accredits selected collegiate programs in technology management. An instructor or graduate of a technology management program may choose to become a Certified Technology Manager (CTM) by sitting for a rigorous exam administered by ATMAE covering production planning & control, safety, quality, and management/supervision.
+ATMAE program accreditation is recognized by the Council for Higher Education Accreditation (CHEA) for accrediting technology management programs. CHEA recognizes ATMAE in the U.S. for accrediting associate, baccalaureate, and master's degree programs in technology, applied technology, engineering technology, and technology-related disciplines delivered by national or regional accredited institutions in
+the United States.(2011)

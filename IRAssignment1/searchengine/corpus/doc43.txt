@@ -1,0 +1,74 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Summary 
+Security management is the identification of an organization's assets (including people, buildings, machines, systems and  information assets), followed by the development, documentation, and implementation of policies and procedures for protecting these assets.
+An organisation uses such security management procedures as asset and information classification, threat assessment, risk assessment, and risk analysis to identify threats, categorise assets, and rate system vulnerabilities so that they can implement effective controls.
+
+
+Loss prevention
+Loss prevention focuses on what your critical assets are and how you are going to protect them. A key component to loss prevention is assessing the potential threats to the successful achievement of the goal. This must include the potential opportunities that further the object (why take the risk unless there's an upside?) Balance probability and impact determine and implement measures to minimize or eliminate those threats.
+Security risk management
+Management of security risks applies the principles of risk management to the management of security threats. It consists of identifying threats (or risk causes), assessing the effectiveness of existing controls to face those threats, determining the risks' consequence(s), prioritizing the risks by rating the likelihood and impact, classifying the type of risk and selecting an appropriate risk option or risk response. In 2016 a universal standard for managing risks has been developed in The Netherlands. In 2017 it was updated and named: Universal Security Management Systems Standard 2017.
+Types of risks
+
+Internal
+
+Risk options
+
+Risk avoidance
+
+Risk reduction
+
+Risk spreading
+
+Risk transfer
+
+Risk acceptance
+
+Security policy implementations
+
+Intrusion detection
+Alarm device
+Access control
+Locks, simple or sophisticated, such as biometric authentication and keycard locks
+Physical security
+Environmental elements (ex. Mountains, Trees, etc.)
+Barricade
+Security guards (armed or unarmed) with wireless communication devices (e.g., two-way radio)
+Security lighting (spotlight, etc.)
+Security Cameras
+Motion Detectors
+IBNS containers for cash in transit.
+Procedures
+Coordination with law enforcement agencies
+Fraud management
+Risk Management
+CPTED
+Risk Analysis
+Risk Mitigation
+Contingency Planning
+Notes
+Also see the information on Security Risk Management at <https://sms2016.nl> 
+
+BBC NEWS | In Depth. BBC News - Home. Web. 18 Mar. 2011. <http://news.bbc.co.uk/2/shared/spl/hi/guides/456900/456993/html/>.
+Rattner, Daniel. "Loss Prevention & Risk Management Strategy." Security Management. Northeastern University, Boston. 5 Mar. 2010. Lecture.
+Rattner, Daniel. "Risk Assessments." Security Management. Northeastern University, Boston. 15 Mar. 2010. Lecture.
+Rattner, Daniel. "Internal & External Threats." Security Management. Northeastern University, Boston. 8 April. 2010. Lecture.
+Asset Protection and Security Management Handbook, POA Publishing LLC, 2003, p358
+ISO 31000 Risk management — Principles and guidelines, 2009, p7
+
+ This article incorporates public domain material from the General Services Administration document "Federal Standard 1037C" (in support of MIL-STD-188).

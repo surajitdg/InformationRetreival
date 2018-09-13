@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+<h4><center>{{ the_title }}</center></h4>
+
+<form name = "login" id = "signup" action="/search" method="post"  >
+
+<!--<p align="center"><small>Enter your query in the search box below</small></p>-->
+<table style="background-color:#EDF0F5; border-radius:5px; width:70%;"   align="center"  >
+<tr><td>  </td><td></td></tr>
+
+<tr>
+    <td>{{the_result1}}  </td>
+</tr>
+<tr>
+    <td>{{the_result2}} </td>
+</tr>
+<tr>
+    <td>{{the_result3}} </td>
+</tr>
+
+</table>
+
+
+</form>
+
+{% endblock %}

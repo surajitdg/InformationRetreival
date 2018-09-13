@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+Summary 
+An incident is an event that could lead to loss of, or disruption to, an organization's operations, services or functions. Incident management (IcM) is a term describing the activities of an organization to identify, analyze, and correct hazards to prevent a future re-occurrence. These incidents within a structured organization are normally dealt with by either an incident response team (IRT), an incident management team (IMT), or Incident Command System (ICS). Without effective incident management, an incident can disrupt business operations, information security, IT systems, employees, customers, or other vital business functions.
+Description
+None
+Physical incident management
+None
+Computer security incident management
+None
+Roles
+None
+Incident management software systems
+None
+Root cause analysis
+None
+Human factors
+None

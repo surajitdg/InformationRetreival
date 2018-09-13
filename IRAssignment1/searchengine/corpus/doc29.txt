@@ -1,0 +1,114 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Summary 
+Operations management for services has the functional responsibility for producing the services of an organization and providing them directly to its customers.  It specifically deals with decisions required by operations managers for simultaneous production and consumption of an intangible product. These decisions concern the process, people, information and the system that produces and delivers the service.  It differs from operations management in general, since the processes of service organizations differ from those of manufacturing organizations.In a post-industrial economy, service firms provide most of the GDP and employment.  As a result, management of service operations within these service firms is essential for the economy.The services sector treats services as intangible products, service as a customer experience and service as a package of facilitating goods and services.  Significant aspects of service as a product are a basis for guiding decisions made by service operations managers. The extent and variety of services industries in which operations managers make decisions provides the context for decision making.
+The six types of decisions made by operations managers in service organizations are: process, quality management, capacity and scheduling, inventory, service supply chain, and information technology.
+
+
+Definition of services
+There have been many different definitions of service.  Russell and Taylor (2011) state that one of the most pervasive, and earliest definitions is “services are intangible products.”.  According to this definition, service is something that cannot be manufactured.  It can be added after manufacturing (e.g. product repair) or it can stand alone as a service (e.g. dentistry) delivered directly to the customer.  This definition has been expanded to include such ideas as “service is a customer experience.” In this case the customer is brought into the definition as the experience the customer receives while “consuming” the service.
+
+A third definition of service concerns the perceived service as consisting of physical facilitating goods, explicit service and implicit service. In this case the facilitating goods are the buildings and inventory used to provide the service. For example, in a restaurant the facilitating goods are the building and the food.  The explicit service is what is perceived as the observable part of the service (the sights, sounds and look of the service).  In a restaurant the explicit service is the time spent waiting for service, the appearance of the facility and the employees, and the ambience of sounds and light and the decor.  The implicit service is the feeling of safety, psychological well-being and happiness associated with the service.
+Comparison of manufacturing and services
+According to Fitzsimmons, Fitzsimmons and Bordoloi (2014) differences between manufactured goods and services are as follows:
+Simultaneous production and consumption.  High contact services (e.g. haircuts) must be produced in the presence of the customer, since they are consumed as produced. As a result, services cannot be produced in one location and transported to another, like goods.  Service operations are therefore highly dispersed geographically close to the customers. Furthermore, simultaneous production and consumption allows the possibility of self-service involving the customer at the point of consumption (e.g. gas stations). Only low-contact services produced in the "backroom" (e.g., check clearing) can be provided away from the customer.
+Perishable. Since services are perishable, they cannot be stored for later use.  In manufacturing companies, inventory can be used to buffer supply and demand. Since buffering is not possible in services, highly variable demand must be met by operations or demand modified to meet supply.
+Ownership.  In manufacturing, ownership is transferred to the customer. Ownership is not transferred for service. As a result, services cannot be owned or resold.
+Tangibility.  A service is intangible making it difficult for a customer to evaluate the service in advance. In the case of a good, customers can see it and evaluate it.   Assurance of quality service is often done by licensing, government regulation, and branding to assure customers they will receive a quality service.These four comparisons indicate how management of service operations are quite different from manufacturing regarding such issues as capacity requirements (highly variable), quality assurance (hard to quantify), location of facilities (dispersed), and interaction with the customer during delivery of the service (product and process design).
+Service industries
+Industries have been defined by economists as consisting of four parts: Agriculture, Mining and Construction, Manufacturing, and Service.  Services have existed for centuries.  Early service was associated with servants.  Servants were hired to do tasks that the wealthy did not want to do for themselves (e.g. cleaning the house, cooking, and washing clothes).  Later, services became more organized and were provided to the general public.
+In 1900 the U.S. service industry (e.g., consisting of banks, professional services, schools and general stores) was fragmented, except for the railroads and communications.  Services were largely local in nature and owned by entrepreneurs and families. The U.S. in 1900 had 31% employment in services, 31% in manufacturing and 38% in agriculture.Services have now evolved to become the dominant form of employment in industrialized economies.  Much of the world has progressed, or is progressing, from agricultural to industrial and now post-industrial economies. The U.S. Bureau of Labor Statistics provides a table of the employment of the 151 million people by industry in the U.S. for 2014.
+
+Source:The table shows that service industries now constitute 83% of employment in the U.S., while agriculture, mining, construction and manufacturing are only 17% of the total employment.  Service industries are very diversified ranging from those that are highly capital intensive (e.g. banks, utilities, airlines, and hospitals) to those that are highly people intensive (e.g. retail, wholesale, and professional services).  In capital intensive services the focus is more on technology and automation, while in people intensive services the focus is more on managing service employees that deliver the service.Service and manufacturing industries are highly interrelated.  Manufacturing provides tangible facilitating goods needed to provide services; and services such as banking, accounting and information systems provide important service inputs to manufacturing.  Manufacturing companies have an opportunity to provide more services along with their products.  This can be an important point of product differentiation, leading to increased sales and profitability for manufacturers.While the focus is often on service industries, there is an opportunity to apply service principles to internal services in an organization, particularly by focusing on internal customers.  Internal services such as payroll, accounting, legal, information systems or human resources often have not identified their internal customers, nor do they understand their customer needs.  Service ideas ranging from process design, to lean systems, quality management, capacity and scheduling have been widely applied to internal services.
+Service design
+Service design begins with a business strategy and service strategy.  The business strategy defines what business the firm is in, for example, the Walt Disney Company defines its business strategy "as making people happy." A business strategy also defines the target market, competitors, financial goals, new products, how the company competes, and perhaps some aspects of operations.
+Following from the business strategy is the service concept. It must provide the rationale for why the customer should buy the service offered. It defines what the customer is receiving and what the service organization is providing.  The service concept includes:
+
+Organizing Idea. The vision and essence of the service.
+Service Provided. The process and results designed by the provider.
+Service Received. The customer experience and outcomes expected.Managers can use the service concept to create organizational alignment and develop new services. It provides a means for describing the service business from an operations point of view.
+After defining the service concept, operations can proceed to define the service-product bundle (or service package) for the organization.  It consists of five parts: service facility, facilitating goods, information, explicit service and implicit services.  It is important to carefully define each of these elements so that operations can subsequently design and manage a service operation.  The service-product bundle must come first before operations decisions.
+An example of service-product bundle characteristics follows:
+Service Facility:  Accessible by public transportation, sufficient parking, interior decorating, architecture, facility layout and traffic flow
+Facilitating goods: sufficient inventory, quality and selection
+Information: Is it accurate, up-to-date, timely, and useful to the customer and service providers
+Explicit service: waiting time, training and appearance of personnel, and consistency
+Implicit service: Sense of well-being, privacy and security, atmosphere, attitude of service providers.Once the service package is specified, operations is ready to make decisions concerning the process, quality, capacity, inventory, supply chain and information systems.  These are the six decision responsibilities of service operations. Other decision responsibilities such as market choice, product positioning, pricing, advertising and channels belong to the  marketing function.  Finance takes care of financial reporting, investments, capitalization, and profitability.
+Operations decisions
+
+Process decisions
+Process decisions include the physical processes and the people that deliver the services to the customer. A service process consists of all the routines, tasks and steps that are used to deliver service to customers along with the jobs and training for service employees.  There are many ways to organize a process to provide customer service in an effective and efficient manner to deliver the service-product bundle.  Several ideas have been advanced on how to design a service process.
+Customer contact
+
+Production-line approach
+
+Service process matrices
+
+Self-service
+
+Lean thinking
+
+Queuing
+
+Service-profit chain
+
+Quality management
+
+SERVQUAL measurement
+
+Quality management approaches
+
+Service recovery
+
+Service guarantee
+
+Capacity and scheduling
+
+Forecasting
+
+Capacity planning
+
+Revenue management
+
+Scheduling
+
+Inventory
+Inventory management and control is needed in service operations with facilitating goods. Almost every service uses some amount of facilitating goods. The presence of facilitating goods is critical in retail and wholesale operations but these operations don't manufacture anything, rather they distribute goods and provide service while doing it. One difference from manufacturing inventories is that services use only finished goods, while manufacturing has finished goods, work-in-process and raw-materials inventories. As a result, manufacturing uses a Materials Requirements Planning System, while services do not. Services use Replenishment inventory control systems such as order-point and periodic-review systems.
+Service supply chains
+Supply chains for service operations are critical to supply facilitating goods.  A typical hospital supply chain is an example. A hospital will use many goods from suppliers to construct and furnish the building. During day-to-day operation of the hospital, inventories of supplies will be held for the operating rooms and throughout the building. The pharmacy will hold drugs and the kitchen will need supplies of food. The supply chain of facilitating goods in hospitals is extensive.
+Purchasing controls a large part of costs in retail and wholesale operations, approximately 75% of all costs are for purchased goods. Outside of retail and wholesale operations, facilitating goods are a much smaller part of total costs reaching a low of 10% for most professional services. Both manufacturing and service organizations purchase goods and must deal with outsourcing and offshoring, as well as, domestic products.
+Service inputs are critical for manufacturing including capital from banks, energy, information systems and human resources.  Services are part of the manufacturing supply chain, just like the physical inputs of products from other manufacturing companies.
+Both manufacturing and service operations can purchase services from outside the organization.  Internal business services such as accounting, legal, human resources, call centers, and information systems may be outsourced in part or entirely.  Some of these services can also be purchased from offshore.  Logistics services may be outsourced to Third Party Logistics (3PL) providers. These services include transportation, warehousing, order fulfillment, returns and tariffs.
+Information technology
+The Internet and information technology has dramatically changed the delivery of services.  Some of the major changes are as follows:
+Providing information and knowledge directly to consumers. Before the Internet, consumers used a variety of sources for acquiring knowledge including libraries, phone calls, universities and personal contacts.  Now information can be provided immediately as a service by searching the Internet.
+Providing service at a distance.  Services such as call centers, banking, entertainment and legal services can be provided over long distances, even internationally.
+Reservations can be made on the Internet to reserve capacity more easily than by calling ahead for the reservation.
+Facilitating goods can be ordered directly by the Internet and delivered without traveling to a retail store. The services provided includes browsing for merchandise, order entry, order checking, payment, order confirmation, notification of delivery and return services.
+Internal information systems now provide an array of management information to help managers make better decisions.
+Management science and operations research (MSOR)
