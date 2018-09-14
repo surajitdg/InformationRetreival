@@ -2,29 +2,13 @@
 {% block body %}
 <h4><center>{{ the_title }}</center></h4>
 
-<form name = "login" id = "signup" action="/search" method="post"  >
-
-<!--<p align="center"><small>Enter your query in the search box below</small></p>-->
-<table style="background-color:#EDF0F5; border-radius:5px; width:70%;"   align="center"  >
+<form name = "search" id = "search" action="/search" method="post"  >
+<table>
 <tr><td>  </td><td></td></tr>
-
 <tr>
 <td>  </td><td> </td><td><input type="text" name="query" style="width:70%"></td><td>  </td></tr>
-
 <tr>
 <td>  </td><td>  </td><td><input type="submit" value="Search" name = "action" > <input type="reset" value="Reset" name = "action" >  </td></tr>
 </table>
-
-
 </form>
-<!--
-<form method='POST' action='/search'>
-<table>
-<p>Use this form to submit a search request:</p>
-<tr><td>Query :</td><td><input name='phrase' type='TEXT' width='60'></td></tr>
-<tr><td>Letters:</td><td><input name='letters' type='TEXT' value='aeiou'></td></tr>
-</table>
-<p>When you're ready, click this button:</p>
-<p><input value='Search' type='SUBMIT'></p>
-</form>-->
 {% endblock %}

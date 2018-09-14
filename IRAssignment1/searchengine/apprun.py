@@ -8,19 +8,28 @@ def entrypage()->'html':
     return render_template('search.html', the_title="Enter the query below to search")
 
 
+def get_title(url):
+    pagetitle = url.split('/')
+    title = 'Wikipedia - '+pagetitle[len(pagetitle) - 1]
+    title = title.replace('_', ' ')
+    return title
+
 @app.route('/search', methods=['POST'])
 def do_search() -> 'html':
-    title = "Here are the top 10 results for the query : "
+    title = "Here are the top results for the query : "
     query = request.form['query']
 
     url_list = querysearch.search(query)
-    print(url_list)
+    title_list = []
+    for link in url_list:
+        title_list.append(get_title(link))
+
+    #print(url_list)
     title = title+query
-
-
-
     #log_request(request, result)
-    return render_template('results.html', the_title=title, the_query=query, the_result1=url_list[0], the_result2=url_list[1], the_result3=url_list[2])
+    return render_template('results.html', the_title=title, links=url_list, the_query=query, titles=title_list)
 
 
 app.run(port=8080, debug=True)
+
+
