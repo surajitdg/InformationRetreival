@@ -2,78 +2,82 @@ import csv
 import pickle
 from movies import Movies, Ratings
 from csvreader import save_list_object
+import numpy as np
+from utilityfunctions import read_object, get_key, save_list_object
 
 
-def get_key(dict_obj, index_value):
-    val = list(dict_obj.keys())[list(dict_obj.values()).index(int(index_value))]
-    return val
+movies_list = read_object('objects/test100/movie_list.pkl')
+ratings_list_base = read_object('objects/test100/rating_list_base.pkl')
+ratings_list_test = read_object('objects/test100/rating_list_test.pkl')
 
+no_of_users = int(ratings_list_base[len(ratings_list_base)-1].user_id)
+no_of_movies = int(len(movies_list))
 
-with open('objects/movie_list.pkl', 'rb') as input:
-    read_movies_list = pickle.load(input)
+movie_id_mapper = {}
 
-#for movie in read_movies_list:
-    #print(movie.movie_id, ' ', movie.movie_title, movie.genres)
-
-with open('objects/rating_list.pkl', 'rb') as input:
-    read_ratings_list = pickle.load(input)
-
-#for rating in read_ratings_list:
-    #print(rating.movie_id, ' ', rating.user_id, rating.rating)
-
-no_of_users = int(read_ratings_list[len(read_ratings_list)-1].user_id)
-no_of_movies = int(len(read_movies_list))
-
-'''movie_id_mapper ={}
 
 count = 0
-for movie in read_movies_list:
+for movie in movies_list:
     movie_id_mapper[movie.movie_id] = count
     count += 1
 
-#for key, value in movie_id_mapper.items():
-#    print('Key =', key, 'Value = ', value)
-
-
-#print(no_of_movies, no_of_users)
-
-matrix = []
+base_matrix = []
+test_matrix = []
 
 for i in range(0, no_of_users, 1):
     new_row = []
     for j in range(0, no_of_movies, 1):
         new_row.append(0)
-    matrix.append(new_row)
+    base_matrix.append(new_row)
 
-
-#print(len(matrix), len(matrix[0]))
-
-for rating in read_ratings_list:
-        x = int(rating.user_id)
-        y = rating.movie_id
+for base_rating in ratings_list_base:
+        x = int(base_rating.user_id)
+        y = base_rating.movie_id
         z = int(movie_id_mapper[y])
         #print('Movie id = ', y, 'Index = ', z)
-        matrix[x-1][z] = rating.rating
+        base_matrix[x-1][z] = float(base_rating.rating)
 
-#save_list_object(matrix, 'objects/matrix.pkl')
-save_list_object(movie_id_mapper, 'objects/movie_mapper.pkl')'''
+for i in range(0, no_of_users, 1):
+    new_row = []
+    for j in range(0, no_of_movies, 1):
+        new_row.append(0)
+    test_matrix.append(new_row)
+
+for test_rating in ratings_list_test:
+        x = int(test_rating.user_id)
+        y = test_rating.movie_id
+        z = int(movie_id_mapper[y])
+        #print('Movie id = ', y, 'Index = ', z)
+        test_matrix[x-1][z] = float(test_rating.rating)
+
+
+save_list_object(base_matrix, 'objects/test100/base_matrix.pkl')
+save_list_object(test_matrix, 'objects/test100/test_matrix.pkl')
+save_list_object(movie_id_mapper, 'objects/test100/movie_mapper.pkl')
+
+'''
 
 #Loading saved matrix and movie mapper dictionary from pickle file#
 
-
-with open('objects/matrix.pkl', 'rb') as input:
-    load_matrix = pickle.load(input)
-
-with open('objects/movie_mapper.pkl', 'rb') as input:
-    movie_id_mapper = pickle.load(input)
+load_base_matrix = read_object('objects/test100/base_matrix.pkl')
+load_test_matrix = read_object('objects/test100/test_matrix.pkl')
+movie_id_mapper = read_object('objects/test100/movie_mapper.pkl')
 
 
-record_counter = 0
+y = np.array([np.array(row) for row in load_base_matrix])
+z = np.array([np.array(row) for row in load_test_matrix])
+
 
 for i in range(no_of_users):
     for j in range(no_of_movies):
-        if load_matrix[i][j] != 0:
-            print(i, get_key(movie_id_mapper, j), load_matrix[i][j])
-            record_counter += 1
+        if int(y[i][j]) != 0:
+            print(i+1, get_key(movie_id_mapper, j), y[i][j])
 
-print(record_counter)
+for i in range(no_of_users):
+    for j in range(no_of_movies):
+        if int(z[i][j]) != 0:
+            print(i+1, get_key(movie_id_mapper, j), z[i][j])
+
+
+
+'''

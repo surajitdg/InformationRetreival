@@ -1,33 +1,22 @@
 import csv
 import pickle
 from movies import Movies, Ratings
-
-
-def save_list_object(list_obj, file_name):
-    with open(file_name, 'wb') as output:  # Overwrites any existing file.
-        pickle.dump(list_obj, output, pickle.HIGHEST_PROTOCOL)
+from utilityfunctions import read_csv, save_list_object
 
 
 movie_list = []
-rating_list = []
-
-with open('dataset/test/movies.csv', 'r') as f:
-    reader = csv.reader(f)
-    for row in reader:
-        movie_list.append(Movies(row[0], row[1], row[2]))
+rating_list_base = []
+rating_list_test = []
 
 
-with open('dataset/test/ratings.csv', 'r') as f:
-    reader = csv.reader(f)
-    for row in reader:
-        rating_list.append(Ratings(row[0], row[1], row[2]))
+movie_list = read_csv('dataset/test100/movies.csv', movie_list, Movies)
+rating_list_base = read_csv('dataset/test100/ratings1_base.csv', rating_list_base, Ratings)
+rating_list_test = read_csv('dataset/test100/ratings1_test.csv', rating_list_test, Ratings)
 
 
-movie_list.pop(0)
-rating_list.pop(0)
-
-save_list_object(movie_list, 'objects/movie_list.pkl')
-save_list_object(rating_list, 'objects/rating_list.pkl')
+save_list_object(movie_list, 'objects/test100/movie_list.pkl')
+save_list_object(rating_list_base, 'objects/test100/rating_list_base.pkl')
+save_list_object(rating_list_test, 'objects/test100/rating_list_test.pkl')
 
 
 
