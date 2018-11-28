@@ -74,16 +74,16 @@ public class UtilityFunctions
 	{
 		// movement of a vector to another by inter-uav distance of 20 m
 		double factor;
-		factor = 20; // factor by which vector will move
+		factor = distance; // factor by which vector will move
 		Point3d new_vector = new Point3d();
 		Vector3d diff_vec = new Vector3d(p2.x - p1.x, p2.y - p1.y, p2.z - p1.z);
 		Vector3d p1_vec = new Vector3d(p1.x, p1.y, p1.z);
 
 		diff_vec.normalize(); // create unit vector along the direction
-		System.out.println(diff_vec.x);
+		/*System.out.println(diff_vec.x);
 		System.out.println(diff_vec.y);
 		System.out.println(diff_vec.z);
-
+*/
 		// new coordinates moved by mentioned factor
 		new_vector.x = p1_vec.x + (diff_vec.x) * factor;
 		new_vector.y = p1_vec.y + (diff_vec.y) * factor;

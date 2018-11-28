@@ -22,10 +22,16 @@ public class BaseStation
 	private static List<Uav> uavList;
 	private static Properties prop;
 	
-	public static void generatePackets(int num)
+	public static void generatePackets(int num, boolean flag)
 	{
 		int counter = 0;
-		while (counter <= 1080)
+		Random r = new Random(System.currentTimeMillis());
+		int limit;
+		if(flag)
+			limit = r.nextInt(540)+400;
+		else
+			limit = r.nextInt(400);
+		while (counter <= limit)
 
 		{
 			Packet p = UtilityFunctions.generatePacket(num);
@@ -35,18 +41,25 @@ public class BaseStation
 
 			Uav uavSender = uavList.get(sender);
 			Uav uavReceiver = uavList.get(receiver);
-
-			if (counter % 2 == 0)
-			{
-				// System.out.println("Inside BaseStation class Sender = "+ sender +"Receiver =
-				// "+receiver);
-				uavSender.getTranQueue().get(receiver).add(p);
-			} else
-			{
-				// System.out.println("Inside BaseStation class Sender = "+ sender +"Receiver =
-				// "+receiver);
-				uavReceiver.getRecQueue().get(sender).add(p);
+			
+			uavSender.getTranQueue().get(receiver).add(p);
+			
+/*			if(flag) {
+				if (counter % 2 == 0)
+				{
+					// System.out.println("Inside BaseStation class Sender = "+ sender +"Receiver =
+					// "+receiver);
+					
+				} else
+				{
+					// System.out.println("Inside BaseStation class Sender = "+ sender +"Receiver =
+					// "+receiver);
+					uavReceiver.getRecQueue().get(sender).add(p);
+				}
 			}
+			else {
+				
+			}*/
 
 			counter++;
 		}
@@ -82,6 +95,26 @@ public class BaseStation
 			}
 		}
 	}
+	
+	public static void deliverPackets(Uav uav)
+	{
+		
+		
+		String[] nbr = prop.getProperty("" + uav.getUavId()).split(",");
+		for(int p = 0; p<nbr.length;p++)
+		{
+			int nbrId = Integer.parseInt(nbr[p]);
+			int k = 100;
+			System.out.println("Size of queue before delivering "+uav.getRecQueue().get(nbrId).size());
+			while(k>=1 && uav.getRecQueue().get(nbrId).size()>=1)
+			{
+				uav.getRecQueue().get(nbrId).poll();
+				//System.out.println("Packet delivered from the queue "+nbrId+ " of the uav "+uav.getUavId()); 
+				k--;
+			}
+			System.out.println("Size of queue after delivering "+uav.getRecQueue().get(nbrId).size());
+		}
+	}
 
 	public static void main(String args[]) throws IOException
 	{
@@ -91,7 +124,7 @@ public class BaseStation
 		prop = new Properties();
 		InputStream is = new FileInputStream("src/main/resources/config.ini");
 		prop.load(is);
-		Random r = new Random(System.currentTimeMillis());
+		
 
 		double x;
 		double y;
@@ -115,14 +148,15 @@ public class BaseStation
 		for (int i = 0; i < num; i++)
 		{
 			String[] nbr = prop.getProperty("" + i).split(",");
-
+			System.out.println("ID = "+i);
 			for (int p = 0; p < nbr.length; p++)
 			{
 				int j = Integer.parseInt(nbr[p]);
+				System.out.println("Neighbour = "+j);
 				Uav uav1 = uavList.get(i);
 				Uav uav2 = uavList.get(j);
 				List<Uav> neighbours1 = uav1.getNeighbours();
-				List<Uav> neighbours2 = uav1.getNeighbours();
+				List<Uav> neighbours2 = uav2.getNeighbours();
 
 				neighbours1.add(uav2);
 				neighbours2.add(uav1);
@@ -158,7 +192,7 @@ public class BaseStation
 		{
 			if (count == 0)
 			{
-					generatePackets(num);
+					generatePackets(num, true);
 			}
 			
 			else
@@ -167,7 +201,7 @@ public class BaseStation
 				{
 					
 					//Write code to transmit from transmission queue
-					
+//					System.out.println("id : "+ );
 					
 					
 					boolean lessThanThreshold = true;
@@ -187,7 +221,16 @@ public class BaseStation
 					
 					if(!lessThanThreshold)
 					{
-						UtilityFunctions.movement(uav.getCenter(), uavList.get(movId).getCenter(), 20.0);
+						Point3d p = UtilityFunctions.movement(uav.getCenter(), uavList.get(movId).getCenter(), 5.0);
+						uav.setCenter(p);
+						uav.setPositionChanged(true);
+						
+						for(Uav uav2 : uav.getNeighbours())
+						{
+							double distance = UtilityFunctions.interUavDistance(uav.getCenter(), uav2.getCenter());
+							uav.getnProp().get(uav2.getUavId()).setDistance(distance);
+							uav2.getnProp().get(uav.getUavId()).setDistance(distance);
+						}
 					}
 						
 					if(uav.isPositionChanged() && lessThanThreshold)
@@ -195,15 +238,23 @@ public class BaseStation
 						double x_coord = Double.parseDouble(prop.getProperty("center_" + uav.getUavId()).split(",")[0]);
 						double y_coord = Double.parseDouble(prop.getProperty("center_" + uav.getUavId()).split(",")[1]);
 						uav.setCenter(new Point3d(x_coord, y_coord, 30));
+						
+						for(Uav uav2 : uav.getNeighbours())
+						{
+							double distance = UtilityFunctions.interUavDistance(uav.getCenter(), uav2.getCenter());
+							uav.getnProp().get(uav2.getUavId()).setDistance(distance);
+							uav2.getnProp().get(uav.getUavId()).setDistance(distance);
+						}
 					}
 					transmitPackets(uav, lessThanThreshold);
+					generatePackets(num, false);
 				}
 			}
 			System.out.println("********************************************Iteration number********************************************" + count);
 			for (Uav uav : uavList)
 			{
 				
-				System.out.println("ID : " + uav.getUavId());
+				System.out.println("ID : " + uav.getUavId()+" co-ordinates : ("+uav.getCenter().x+", "+uav.getCenter().y+", "+uav.getCenter().z+")");
 				for (Map.Entry<Integer, Queue<Packet>> entry : uav.getTranQueue().entrySet())
 				{
 					System.out.println("Link - " + entry.getKey());
@@ -214,6 +265,7 @@ public class BaseStation
 					System.out.println("Link - " + entry.getKey());
 					System.out.println("RecVQueue Length - " + entry.getValue().size());
 				}
+				deliverPackets(uav);
 			}
 			count++;
 		}
