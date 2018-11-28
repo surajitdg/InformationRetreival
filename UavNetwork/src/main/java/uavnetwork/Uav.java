@@ -26,6 +26,8 @@ public class Uav
 	private List<Uav> neighbours;
 	private int threshold;
 	private Map<Integer, NeighbourProperties> nProp;
+	
+	private boolean positionChanged;
 
 	public Uav(int uavId, Point3d center, int radius, int threshold)
 	{
@@ -38,9 +40,26 @@ public class Uav
 		this.recQueue = new HashMap<Integer, Queue<Packet>>();
 		this.neighbours = new ArrayList<Uav>();
 		this.nProp = new HashMap<Integer, NeighbourProperties>();
+		this.positionChanged = false;
 		
 	}
 	
+	
+	
+	public boolean isPositionChanged()
+	{
+		return positionChanged;
+	}
+
+
+
+	public void setPositionChanged(boolean positionChanged)
+	{
+		this.positionChanged = positionChanged;
+	}
+
+
+
 	public void changeCoordinates(Point3d newCenter)
 	{
 		this.center = newCenter;
