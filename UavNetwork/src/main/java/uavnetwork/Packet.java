@@ -5,7 +5,7 @@ public class Packet
 	private int packetId;
 	private int senderId;
 	private int recevierId;
-	private int size;
+	private static final int size=50000;
 	
 	public int getPacketId()
 	{
@@ -31,14 +31,11 @@ public class Packet
 	{
 		this.recevierId = recevierId;
 	}
-	public int getSize()
+	public static int getSize()
 	{
 		return size;
 	}
-	public void setSize(int size)
-	{
-		this.size = size;
-	}
+
 	
 	
 }

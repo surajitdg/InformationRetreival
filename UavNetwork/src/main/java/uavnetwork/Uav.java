@@ -22,7 +22,7 @@ public class Uav
 	private Circle area ;
 	private Map<Integer, Queue<Packet>> tranQueue;
 	private Map<Integer, Queue<Packet>> recQueue;
-	
+	private Map<Integer, Integer> routingTable;
 	private List<Uav> neighbours;
 	private int threshold;
 	private Map<Integer, NeighbourProperties> nProp;
@@ -41,7 +41,7 @@ public class Uav
 		this.neighbours = new ArrayList<Uav>();
 		this.nProp = new HashMap<Integer, NeighbourProperties>();
 		this.positionChanged = false;
-		
+		this.routingTable = new HashMap<Integer, Integer>();
 	}
 	
 	
@@ -136,6 +136,20 @@ public class Uav
 	
 	
 	
+	public Map<Integer, Integer> getRoutingTable()
+	{
+		return routingTable;
+	}
+
+
+
+	public void setRoutingTable(Map<Integer, Integer> routingTable)
+	{
+		this.routingTable = routingTable;
+	}
+
+
+
 	public Map<Integer, Queue<Packet>> getTranQueue()
 	{
 		return tranQueue;
