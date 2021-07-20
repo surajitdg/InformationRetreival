@@ -2,22 +2,35 @@ import csv
 import pickle
 from movies import Movies, Ratings
 from csvreader import save_list_object
-from svd import svd, get_pseudo_inverse, get_pseudo_inverse_2, compute_svd
+from svd_recommender import svd
 import numpy as np
 import random
 import math
+import cmath
 from utilityfunctions import read_object
+import time
 
-base_matrix = ratings_list_base = read_object('objects/test100/base_matrix.pkl')
+
+#from svd_recommender import svd
+start_time = time.time()
+#base_matrix = read_object('objects/test100/base_matrix.pkl')
 test_matrix = read_object('objects/test100/test_matrix.pkl')
 
-#base_matrix = np.matrix([[1, 1, 1, 0, 0], [3, 3, 3, 0, 0], [4, 4, 4, 0, 0], [5, 5, 5, 0, 0], [0, 0, 0, 4, 4],
-                         #[0, 0, 0, 5, 5], [0, 0, 0, 2, 2]])
+base_matrix = np.array([[1, 1, 1, 0, 0], [3, 3, 3, 0, 0], [4, 4, 4, 0, 0], [5, 5, 5, 0, 0], [0, 0, 0, 4, 4],
+                        [0, 0, 0, 5, 5], [0, 0, 0, 2, 2]])
 
 #print(base_matrix.item(4, 3))
 
+#base_array = np.array([np.array(row) for row in base_matrix])
+test_array = np.array([np.array(row) for row in test_matrix])
+
+final_matrix = base_matrix #+ test_matrix
+
+
+#print('Base matrix dimensions', base_matrix.shape[0], base_matrix.shape[1])
+
 no_of_users = len(base_matrix)
-no_of_movies = 1682
+no_of_movies = len(base_matrix[0])
 
 total_sum = 0
 col = [0] * no_of_movies
@@ -25,10 +38,6 @@ row = [0] * no_of_users
 
 pr_row = [0] * no_of_users
 pr_col = [0] * no_of_movies
-
-base_array = np.array([np.array(row) for row in base_matrix])
-base_matrix = np.matrix(base_array)
-
 
 for i in range(no_of_users):
     for j in range(no_of_movies):
@@ -42,21 +51,53 @@ for i in range(no_of_users):
 for i in range(no_of_movies):
     pr_col[i] = col[i]*1.0/total_sum
 
-print(pr_row)
-print(pr_col)
+#print(pr_row)
+#print(pr_col)
 
-r = 256
-#ran_col = [1,3]
-#ran_row = [5,3]
+r = np.linalg.matrix_rank(base_matrix)
 
-ran_row = random.sample(range(0, no_of_users-1), r)
-ran_col = random.sample(range(0, no_of_movies-1), r)
-
-#ran_row.sort()
-#ran_col.sort()
-
-#print(ran_col)
+'''for i in range(0, r):
+    ran_row.append(np.random.choice(list(range(0, no_of_users)), pr_row))
+    ran_col.append(np.random.choice(list(range(no_of_movies)), pr_col))
+'''
 #print(ran_row)
+#print(ran_col)
+
+row_ids = list(range(0, no_of_users))
+col_ids = list(range(0, no_of_movies))
+
+ran_row = []
+ran_col = []
+
+for i in range(0, r, 1):
+    ran_row.append(random.choices(row_ids, pr_row)[0])
+    ran_col.append(random.choices(col_ids, pr_col)[0])
+
+
+px_row = []
+px_col = []
+
+for i in ran_row:
+    px_row.append(pr_row[i])
+
+for i in ran_col:
+    px_col.append(pr_col[i])
+
+
+px_row = np.array(px_row)
+ran_row = np.array(ran_row)
+ind = px_row.argsort()[::-1]
+px_row = px_row[ind]
+ran_row = ran_row[ind]
+
+px_col = np.array(px_col)
+ran_col = np.array(ran_col)
+ind = px_col.argsort()[::-1]
+px_col = px_col[ind]
+ran_col = ran_col[ind]
+
+ran_col = [1,4]
+ran_row = [4,1]
 
 
 #c_matrix = [[0 for x in range(r)] for y in range(no_of_users)]
@@ -98,24 +139,27 @@ c_matrix_np = np.matrix(c_matrix)
 r_matrix_np = np.matrix(r_matrix)
 w_matrix_np = np.matrix(w_matrix)
 
+
 print('************************  C - Matrix  ***********************************')
 print(c_matrix_np)
 print('************************  R - Matrix  ***********************************')
 print(r_matrix_np)
+
 print('************************  W - Matrix  ***********************************')
 print(w_matrix_np)
 
+
 svd_object = svd(w_matrix_np, r)#int(r/2))
+
+#svd_object = np.linalg.svd(w_matrix_np)
 
 u_matrix = svd_object[0]
 v_matrix = svd_object[1]
 sigma_matrix = svd_object[2]
 
-
-pseudo_matrix_1 = get_pseudo_inverse(sigma_matrix)
-pseudo_matrix_2 = get_pseudo_inverse_2(sigma_matrix)
-
-
+print('Sigma dimensions ', np.matrix(sigma_matrix).shape)
+print('U dimensions ', np.matrix(u_matrix).shape)
+print('V dimensions ', np.matrix(v_matrix).shape)
 
 print('***********************************************************')
 
@@ -127,58 +171,55 @@ print('************************  E - Matrix  ***********************************
 print(np.matrix(sigma_matrix))
 
 
-print('************************  Pseudo - Matrix - scipy  ***********************************')
-print(np.matrix(pseudo_matrix_1))
-print('************************  Pseudo - Matrix - numpy  ***********************************')
-print(np.matrix(pseudo_matrix_2))
-
-pseudo_square_matrix = np.matrix(pseudo_matrix_1)*np.matrix(pseudo_matrix_1)
-print('************************  Pseudo - Matrix - square  ***********************************')
-
-print(pseudo_square_matrix)
-
 x_transpose = np.matrix(u_matrix).transpose()
-y = np.matrix(v_matrix)
+y_transpose = np.matrix(v_matrix).transpose()
 
-print('************************  X Transpose ***********************************')
-print(x_transpose)
+sig_rows = np.matrix(sigma_matrix).shape[0]
+sig_cols = np.matrix(sigma_matrix).shape[1]
+
+z = np.zeros(shape=(sig_rows, sig_cols))
+
+
+for i in range(sig_rows):
+    for j in range(sig_cols):
+        if sigma_matrix[i][j] != 0:
+            z[i][j] = float(1/sigma_matrix[i][j].real)
+
+
+#print('************************  X Transpose ***********************************')
+#print(x_transpose)
 
 print('************************  Y Transpose ***********************************')
-print(y)
-print(y.shape, pseudo_square_matrix.shape, x_transpose.shape)
-u_matrix = y*pseudo_square_matrix*x_transpose
+#print(y_transpose)
+temp = np.matmul(y_transpose, z)
+u_matrix = np.matmul(temp, x_transpose)#y_transpose@pseudo_square_matrix@x_transpose
 
 print('************************  U Matrix  ***********************************')
 print(u_matrix)
 
-temp = u_matrix * r_matrix_np
-final_cur = c_matrix_np * temp
+temp2 = np.matmul(c_matrix_np, u_matrix)
+final_cur = np.matmul(temp2, r_matrix_np)
 
 print('************************  Final CUR Matrix  ***********************************')
 
-print(final_cur)
+print(np.array(final_cur))
 
 print('************************  A - CUR Matrix ***********************************')
 
-diff_matrix = base_matrix - final_cur
+diff_matrix = final_matrix - final_cur
 print(diff_matrix)
 
+sum = 0
 
-'''
-svd_u, svd_v, svd_sigma = svd(base_matrix, 3)
+for i in range(no_of_users):
+    for j in range(no_of_movies):
+            if diff_matrix.item(i, j) != 0:
+                sum += diff_matrix.item(i, j) * diff_matrix.item(i, j)
 
-print(svd_u)
-print(svd_sigma)
-print(np.matrix(svd_v).transpose())
+rmse = np.sqrt(sum/(no_of_users*no_of_movies))
 
-#final_svd = np.matrix(svd_u) * np.matrix(svd_sigma) * np.matrix(svd_v).transpose()
+print('Rmse = ', rmse)
+print('Time in seconds = ', time.time()-start_time)
 
-print('************************  Final SVD Matrix  ***********************************')
 
-#print(final_svd)
-
-print('************************  SVD - A Matrix ***********************************')
-
-#diff_matrix_2 = final_svd - base_matrix
-#print(diff_matrix_2)'''
 
